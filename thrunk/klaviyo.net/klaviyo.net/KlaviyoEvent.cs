@@ -13,6 +13,10 @@ namespace klaviyo.net
         {
             CustomerProperties = new CustomerProperties();
             Properties = new Properties();
+            DateTime d1 = new DateTime(1970, 1, 1);
+            DateTime d2 = DateTime.Now.ToUniversalTime();
+            TimeSpan ts = new TimeSpan(d2.Ticks - d1.Ticks);
+            Time = Math.Round(ts.TotalMilliseconds / 1000, 0).ToString();
         }
 
         [DataMember(Name = "token")]
@@ -37,6 +41,6 @@ namespace klaviyo.net
         public int ItemCount { get; set; }
 
         [DataMember(Name = "time")]
-        public double Time { get; set; }
+        public string Time { get; private set; }
     }
 }
