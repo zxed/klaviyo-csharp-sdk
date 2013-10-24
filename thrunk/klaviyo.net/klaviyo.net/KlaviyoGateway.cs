@@ -20,8 +20,9 @@ namespace klaviyo.net
 
         public string Token
         {
-            get;
-            set;
+            get {
+                return _token;
+            }
         }
 
         public SubmitStatus PostEvent(KlaviyoEvent obj)
@@ -49,7 +50,6 @@ namespace klaviyo.net
                 if (str == "1") return SubmitStatus.Success;
                 else return SubmitStatus.Fail;
             }
-
         }
     }
 }
