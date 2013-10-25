@@ -20,7 +20,13 @@ namespace klaviyo.net.Converters
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            throw new NotImplementedException();
+            writer.WriteStartObject();
+            foreach (var item in ((CustomerProperties)value).NotRequiredProperties)
+            {
+                /*writer.WritePropertyName(GetFooKey(foo));
+                serializer.Serialize(writer, foo);*/
+            }
+            writer.WriteEndObject();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -24,6 +25,7 @@ namespace klaviyo.net
         [DataMember(Name = "total_price")]
         public decimal TotalPrice { get; set; }
 
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public Dictionary<string, string> NotRequiredProperties { get; set; }
     }
 }
