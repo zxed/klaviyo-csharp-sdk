@@ -15,6 +15,9 @@ namespace klaviyo.net
             NotRequiredProperties = new List<NotRequiredProperty>();
         }
 
+        [DataMember(Name = "$id")]
+        public string Id { get; set; }
+
         [DataMember(Name = "$email")]
         public string Email { get; set; }
 

@@ -14,7 +14,6 @@ namespace klaviyo.net
         {
             CustomerProperties = new CustomerProperties();
             Properties = new Properties();
-            NotRequiredProperties = new List<NotRequiredProperty>();
 
             DateTime d1 = new DateTime(1970, 1, 1);
             DateTime d2 = DateTime.Now.ToUniversalTime();
@@ -36,8 +35,5 @@ namespace klaviyo.net
 
         [DataMember(Name = "time")]
         public string Time { get; private set; }
-
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public List<NotRequiredProperty> NotRequiredProperties { get; set; }
     }
 }

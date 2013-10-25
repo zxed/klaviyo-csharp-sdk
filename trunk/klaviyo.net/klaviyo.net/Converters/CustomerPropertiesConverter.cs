@@ -22,6 +22,9 @@ namespace klaviyo.net.Converters
         {
             writer.WriteStartObject();
 
+            writer.WritePropertyName("$id");
+            serializer.Serialize(writer, ((CustomerProperties)value).Id);
+
             writer.WritePropertyName("$email");
             serializer.Serialize(writer, ((CustomerProperties)value).Email);
 

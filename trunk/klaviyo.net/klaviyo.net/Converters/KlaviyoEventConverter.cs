@@ -37,11 +37,6 @@ namespace klaviyo.net.Converters
             writer.WritePropertyName("time");
             serializer.Serialize(writer, ((KlaviyoEvent)value).Time);
 
-            foreach (var item in ((KlaviyoEvent)value).NotRequiredProperties)
-            {
-                writer.WritePropertyName(item.Name);
-                serializer.Serialize(writer, item.Value);
-            }
             writer.WriteEndObject();
         }
     }
