@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -13,8 +14,6 @@ namespace klaviyo.net
         {
             CustomerProperties = new CustomerProperties();
             Properties = new Properties();
-            UniqueCategories = new List<string>();
-            Categories = new List<string>();
 
             DateTime d1 = new DateTime(1970, 1, 1);
             DateTime d2 = DateTime.Now.ToUniversalTime();
@@ -34,16 +33,10 @@ namespace klaviyo.net
         [DataMember(Name = "properties")]
         public Properties Properties { get; set; }
 
-        [DataMember(Name = "Item Categories")]
-        public List<string> Categories { get; set; }
-
-        [DataMember(Name = "Unique Item Categories")]
-        public List<string> UniqueCategories { get; set; }
-
-        [DataMember(Name = "Item Count")]
-        public int ItemCount { get; set; }
-
         [DataMember(Name = "time")]
         public string Time { get; private set; }
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public List<NotRequiredProperty> NotRequiredProperties { get; set; }
     }
 }

@@ -15,21 +15,6 @@ namespace klaviyo.net
             NotRequiredProperties = new List<NotRequiredProperty>();
         }
 
-        [DataMember(Name = "item_id")]
-        public string ItemId { get; set; }
-
-        [DataMember(Name = "name")]
-        public string Name { get; set; }
-
-        [DataMember(Name = "quantity")]
-        public int Quantity { get; set; }
-
-        [DataMember(Name = "unit_price")]
-        public decimal UnitPrice { get; set; }
-
-        [DataMember(Name = "total_price")]
-        public decimal TotalPrice { get; set; }
-
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public List<NotRequiredProperty> NotRequiredProperties { get; set; }
     }

@@ -36,7 +36,10 @@ namespace klaviyo.net
 
                 System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
                 List<JsonConverter> converters = new List<JsonConverter>();
+
+                converters.Add(new KlaviyoEventConverter());
                 converters.Add(new CustomerPropertiesConverter());
+                converters.Add(new PropertiesConverter());
                 converters.Add(new PropertyConverter());
 
                 byte[] bytes = encoding.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(obj, converters.ToArray()));

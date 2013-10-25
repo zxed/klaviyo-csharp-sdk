@@ -22,13 +22,13 @@ namespace klaviyo.net.Converters
         {
             writer.WriteStartObject();
 
-            writer.WritePropertyName("email");
+            writer.WritePropertyName("$email");
             serializer.Serialize(writer, ((CustomerProperties)value).Email);
 
-            writer.WritePropertyName("first_name");
+            writer.WritePropertyName("$first_name");
             serializer.Serialize(writer, ((CustomerProperties)value).FirstName);
 
-            writer.WritePropertyName("last_name");
+            writer.WritePropertyName("$last_name");
             serializer.Serialize(writer, ((CustomerProperties)value).LastName);
 
             foreach (var item in ((CustomerProperties)value).NotRequiredProperties)

@@ -15,13 +15,13 @@ namespace klaviyo.net
             NotRequiredProperties = new List<NotRequiredProperty>();
         }
 
-        [DataMember(Name = "email")]
+        [DataMember(Name = "$email")]
         public string Email { get; set; }
 
-        [DataMember(Name = "first_name")]
+        [DataMember(Name = "$first_name")]
         public string FirstName { get; set; }
 
-        [DataMember(Name = "last_name")]
+        [DataMember(Name = "$last_name")]
         public string LastName { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]

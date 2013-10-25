@@ -8,6 +8,6 @@ namespace klaviyo.net
     public class NotRequiredProperty
     {
         public string Name { get; set; }
-        public string Value { get; set; }
+        public object Value { get; set; }
     }
 }

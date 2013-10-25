@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -14,13 +15,16 @@ namespace klaviyo.net
             Items = new List<Property>();
         }
 
+        [DataMember(Name = "$event_id")]
+        public string EventId { get; set; }
+
         [DataMember(Name = "$value")]
         public decimal Value { get; set; }
 
-        [DataMember(Name = "order_id")]
-        public string OrderId { get; set; }
-
         [DataMember(Name = "items")]
-        public virtual List<Property> Items { get; set; }
+        public List<Property> Items { get; set; }
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public List<NotRequiredProperty> NotRequiredProperties { get; set; }
     }
 }
