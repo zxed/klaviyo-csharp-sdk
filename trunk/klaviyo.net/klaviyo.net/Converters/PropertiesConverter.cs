@@ -23,8 +23,6 @@ namespace klaviyo.net.Converters
             writer.WriteStartObject();
             writer.WritePropertyName("$event_id");
             serializer.Serialize(writer, ((Properties)value).EventId);
-            if (string.IsNullOrEmpty(((Properties)value).EventId))
-                throw new Exception("EventId required!");
 
             writer.WritePropertyName("$value");
             serializer.Serialize(writer, ((Properties)value).Value);

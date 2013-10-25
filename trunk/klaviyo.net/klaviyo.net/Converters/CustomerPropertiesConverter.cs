@@ -24,23 +24,19 @@ namespace klaviyo.net.Converters
 
             writer.WritePropertyName("$id");
             serializer.Serialize(writer, ((CustomerProperties)value).Id);
-            if (string.IsNullOrEmpty(((CustomerProperties)value).Id))
-                throw new Exception("Id required!");
-
+            
             writer.WritePropertyName("$email");
             serializer.Serialize(writer, ((CustomerProperties)value).Email);
-            if (string.IsNullOrEmpty(((CustomerProperties)value).Email))
-                throw new Exception("Email required!");
+
+            if (string.IsNullOrEmpty(((CustomerProperties)value).Id) 
+                && string.IsNullOrEmpty(((CustomerProperties)value).Email))
+                throw new Exception("Need enter email or id!");
 
             writer.WritePropertyName("$first_name");
             serializer.Serialize(writer, ((CustomerProperties)value).FirstName);
-            if (string.IsNullOrEmpty(((CustomerProperties)value).FirstName))
-                throw new Exception("FirstName required!");
 
             writer.WritePropertyName("$last_name");
             serializer.Serialize(writer, ((CustomerProperties)value).LastName);
-            if (string.IsNullOrEmpty(((CustomerProperties)value).LastName))
-                throw new Exception("LastName required!");
 
             foreach (var item in ((CustomerProperties)value).NotRequiredProperties)
             {
