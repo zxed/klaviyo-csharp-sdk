@@ -11,7 +11,7 @@ namespace klaviyo.net
 {
     public class KlaviyoGateway
     {
-        private Uri _baseAddressUri = new Uri("http://a.klaviyo.com/api/");
+        private Uri _baseAddressUri = new Uri("https://a.klaviyo.com/api/");
 
         private string _token = "";
 
