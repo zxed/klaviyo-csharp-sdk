@@ -9,6 +9,11 @@ namespace klaviyo.net
     [DataContract]
     public class Properties
     {
+        public Properties()
+        {
+            Items = new List<Property>();
+        }
+
         [DataMember(Name = "$value")]
         public decimal Value { get; set; }
 

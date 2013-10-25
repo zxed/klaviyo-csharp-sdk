@@ -25,7 +25,7 @@ namespace klaviyo.net
             }
         }
 
-        public SubmitStatus PostEvent(KlaviyoEvent obj)
+        public SubmitStatus Track(KlaviyoEvent obj)
         {
             using (WebClient downloader = new WebClient())
             {

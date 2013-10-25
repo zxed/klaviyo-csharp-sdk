@@ -13,6 +13,9 @@ namespace klaviyo.net
         {
             CustomerProperties = new CustomerProperties();
             Properties = new Properties();
+            UniqueCategories = new List<string>();
+            Categories = new List<string>();
+
             DateTime d1 = new DateTime(1970, 1, 1);
             DateTime d2 = DateTime.Now.ToUniversalTime();
             TimeSpan ts = new TimeSpan(d2.Ticks - d1.Ticks);
