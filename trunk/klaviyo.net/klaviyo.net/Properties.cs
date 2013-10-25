@@ -13,6 +13,7 @@ namespace klaviyo.net
         public Properties()
         {
             Items = new List<Property>();
+            NotRequiredProperties = new List<NotRequiredProperty>();
         }
 
         [DataMember(Name = "$event_id")]

@@ -14,6 +14,7 @@ namespace klaviyo.net
         {
             CustomerProperties = new CustomerProperties();
             Properties = new Properties();
+            NotRequiredProperties = new List<NotRequiredProperty>();
 
             DateTime d1 = new DateTime(1970, 1, 1);
             DateTime d2 = DateTime.Now.ToUniversalTime();
