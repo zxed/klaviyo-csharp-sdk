@@ -39,7 +39,7 @@ namespace klaviyo.net.Converters
 
             foreach (var item in ((Property)value).NotRequiredProperties)
             {
-                writer.WritePropertyName(item.Key);
+                writer.WritePropertyName(item.Name);
                 serializer.Serialize(writer, item.Value);
             }
             writer.WriteEndObject();

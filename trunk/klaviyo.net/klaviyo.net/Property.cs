@@ -12,7 +12,7 @@ namespace klaviyo.net
     {
         public Property()
         {
-            NotRequiredProperties = new Dictionary<string, string>();
+            NotRequiredProperties = new List<NotRequiredProperty>();
         }
 
         [DataMember(Name = "item_id")]
@@ -31,6 +31,6 @@ namespace klaviyo.net
         public decimal TotalPrice { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, string> NotRequiredProperties { get; set; }
+        public List<NotRequiredProperty> NotRequiredProperties { get; set; }
     }
 }

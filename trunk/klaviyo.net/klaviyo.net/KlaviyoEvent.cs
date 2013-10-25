@@ -26,7 +26,7 @@ namespace klaviyo.net
         public string Token { get; set; }
 
         [DataMember(Name = "event")]
-        public string Type { get; set; }
+        public string Event { get; set; }
 
         [DataMember(Name = "customer_properties")]
         public virtual CustomerProperties CustomerProperties { get; set; }

@@ -12,7 +12,7 @@ namespace klaviyo.net
     {
         public CustomerProperties()
         {
-            NotRequiredProperties = new Dictionary<string, string>();
+            NotRequiredProperties = new List<NotRequiredProperty>();
         }
 
         [DataMember(Name = "email")]
@@ -25,6 +25,6 @@ namespace klaviyo.net
         public string LastName { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, string> NotRequiredProperties { get; set; }
+        public List<NotRequiredProperty> NotRequiredProperties { get; set; }
     }
 }

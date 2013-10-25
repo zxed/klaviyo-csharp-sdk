@@ -50,6 +50,7 @@
     <Compile Include="Enums.cs" />
     <Compile Include="KlaviyoEvent.cs" />
     <Compile Include="KlaviyoGateway.cs" />
+    <Compile Include="NotRequiredProperty.cs" />
     <Compile Include="Properties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Property.cs" />
