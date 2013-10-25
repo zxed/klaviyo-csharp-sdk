@@ -10,6 +10,11 @@ namespace klaviyo.net
     [DataContract]
     public class CustomerProperties
     {
+        public CustomerProperties()
+        {
+            NotRequiredProperties = new Dictionary<string, string>();
+        }
+
         [DataMember(Name = "email")]
         public string Email { get; set; }
 

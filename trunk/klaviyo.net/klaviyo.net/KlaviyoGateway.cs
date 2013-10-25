@@ -44,7 +44,7 @@ namespace klaviyo.net
                 parameters.Add("data", sBase64);
                 Uri formattedUri = uriTemplate.BindByName(_baseAddressUri, parameters);
                 string str = "";
-
+                
                 using (Stream myStream = downloader.OpenRead(formattedUri))
                 {
                     using (StreamReader sr = new StreamReader(myStream))

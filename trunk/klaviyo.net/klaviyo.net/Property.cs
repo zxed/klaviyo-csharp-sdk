@@ -10,6 +10,11 @@ namespace klaviyo.net
     [DataContract]
     public class Property
     {
+        public Property()
+        {
+            NotRequiredProperties = new Dictionary<string, string>();
+        }
+
         [DataMember(Name = "item_id")]
         public string ItemId { get; set; }
 
