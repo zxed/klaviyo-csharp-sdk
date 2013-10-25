@@ -24,9 +24,13 @@ namespace klaviyo.net.Converters
 
             writer.WritePropertyName("token");
             serializer.Serialize(writer, ((KlaviyoEvent)value).Token);
+            if (string.IsNullOrEmpty(((KlaviyoEvent)value).Token))
+                throw new Exception("Token required!");
 
             writer.WritePropertyName("event");
             serializer.Serialize(writer, ((KlaviyoEvent)value).Event);
+            if (string.IsNullOrEmpty(((KlaviyoEvent)value).Event))
+                throw new Exception("Event required!");
 
             writer.WritePropertyName("customer_properties");
             serializer.Serialize(writer, ((KlaviyoEvent)value).CustomerProperties);
