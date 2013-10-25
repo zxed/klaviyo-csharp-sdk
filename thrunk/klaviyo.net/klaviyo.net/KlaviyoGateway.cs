@@ -1,4 +1,6 @@
-﻿using System;
+﻿using klaviyo.net.Converters;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -33,7 +35,11 @@ namespace klaviyo.net
                 IDictionary<string, string> parameters = new Dictionary<string, string>();
 
                 System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
-                byte[] bytes = encoding.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(obj));
+                List<JsonConverter> converters = new List<JsonConverter>();
+                converters.Add(new CustomerPropertiesConverter());
+                converters.Add(new PropertyConverter());
+
+                byte[] bytes = encoding.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(obj, converters.ToArray()));
                 string sBase64 = System.Convert.ToBase64String(bytes);
                 parameters.Add("data", sBase64);
                 Uri formattedUri = uriTemplate.BindByName(_baseAddressUri, parameters);

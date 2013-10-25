@@ -17,5 +17,7 @@ namespace klaviyo.net
 
         [DataMember(Name = "last_name")]
         public string LastName { get; set; }
+
+        public Dictionary<string, string> NotRequiredProperties { get; set; }
     }
 }

@@ -23,5 +23,7 @@ namespace klaviyo.net
 
         [DataMember(Name = "total_price")]
         public decimal TotalPrice { get; set; }
+
+        public Dictionary<string, string> NotRequiredProperties { get; set; }
     }
 }

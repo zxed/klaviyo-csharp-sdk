@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\CustomerPropertiesConverter.cs" />
+    <Compile Include="Converters\PropertyConverter.cs" />
     <Compile Include="CustomerProperties.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="KlaviyoEvent.cs" />
