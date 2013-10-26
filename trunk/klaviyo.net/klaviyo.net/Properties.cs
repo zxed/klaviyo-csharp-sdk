@@ -12,7 +12,6 @@ namespace klaviyo.net
     {
         public Properties()
         {
-            Items = new List<Property>();
             NotRequiredProperties = new List<NotRequiredProperty>();
         }
 
@@ -21,9 +20,6 @@ namespace klaviyo.net
 
         [DataMember(Name = "$value")]
         public decimal Value { get; set; }
-
-        [DataMember(Name = "items")]
-        public List<Property> Items { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public List<NotRequiredProperty> NotRequiredProperties { get; set; }
