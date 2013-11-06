@@ -17,11 +17,9 @@ namespace klaviyo.test_client
                 Event = "Order"
             };
             var list = new List<NotRequiredProperty>();
-            list.Add(new NotRequiredProperty() { Name = "first field", Value = "first value" });
-            list.Add(new NotRequiredProperty() { Name = "second field", Value = "second value" });
-            ev.Properties.Items = new List<Property>() { new Property() { 
-                 NotRequiredProperties = list
-            } };
+            list.Add(new NotRequiredProperty("first field", "first value"));
+            list.Add(new NotRequiredProperty("second field", "second value"));
+            ev.Properties.NotRequiredProperties.Add(new NotRequiredProperty("items", new List<Property>()));
             ev.Properties.EventId = "1";
             ev.Properties.Value = 0M;
 
