@@ -19,7 +19,7 @@ namespace klaviyo.net
         public string EventId { get; set; }
 
         [DataMember(Name = "$value")]
-        public decimal Value { get; set; }
+        public decimal? Value { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public List<NotRequiredProperty> NotRequiredProperties { get; set; }

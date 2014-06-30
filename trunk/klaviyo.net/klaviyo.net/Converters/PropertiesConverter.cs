@@ -24,8 +24,11 @@ namespace klaviyo.net.Converters
             writer.WritePropertyName("$event_id");
             serializer.Serialize(writer, ((Properties)value).EventId);
 
-            writer.WritePropertyName("$value");
-            serializer.Serialize(writer, ((Properties)value).Value);
+            if (((Properties)value).Value.HasValue)
+            {
+                writer.WritePropertyName("$value");
+                serializer.Serialize(writer, ((Properties)value).Value);
+            }
           
             foreach (var item in ((Properties)value).NotRequiredProperties)
             {
