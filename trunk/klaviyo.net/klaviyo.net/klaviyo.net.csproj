@@ -46,12 +46,14 @@
   <ItemGroup>
     <Compile Include="Converters\CustomerPropertiesConverter.cs" />
     <Compile Include="Converters\KlaviyoEventConverter.cs" />
+    <Compile Include="Converters\KlaviyoPeopleConverter.cs" />
     <Compile Include="Converters\PropertiesConverter.cs" />
     <Compile Include="Converters\PropertyConverter.cs" />
     <Compile Include="CustomerProperties.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="KlaviyoEvent.cs" />
     <Compile Include="KlaviyoGateway.cs" />
+    <Compile Include="KlaviyoPeople.cs" />
     <Compile Include="NotRequiredProperty.cs" />
     <Compile Include="Properties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

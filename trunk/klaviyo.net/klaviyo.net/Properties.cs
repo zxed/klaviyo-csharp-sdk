@@ -15,9 +15,11 @@ namespace klaviyo.net
             NotRequiredProperties = new List<NotRequiredProperty>();
         }
 
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(Name = "$event_id")]
         public string EventId { get; set; }
 
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(Name = "$value")]
         public decimal? Value { get; set; }
 
