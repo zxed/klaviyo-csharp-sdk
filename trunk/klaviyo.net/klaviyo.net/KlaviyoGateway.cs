@@ -39,7 +39,7 @@ namespace klaviyo.net
 
                 converters.Add(new KlaviyoEventConverter());
                 converters.Add(new CustomerPropertiesConverter());
-                converters.Add(new PropertiesConverter());
+                converters.Add(new PropertiesConverter(PropertyType.People));
                 converters.Add(new PropertyConverter());
 
                 byte[] bytes = encoding.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(obj, converters.ToArray()));
@@ -72,7 +72,7 @@ namespace klaviyo.net
                 List<JsonConverter> converters = new List<JsonConverter>();
 
                 converters.Add(new KlaviyoPeopleConverter());
-                converters.Add(new PropertiesConverter());
+                converters.Add(new PropertiesConverter(PropertyType.Event));
                 converters.Add(new PropertyConverter());
 
                 byte[] bytes = encoding.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(obj, converters.ToArray()));

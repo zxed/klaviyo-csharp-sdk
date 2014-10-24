@@ -20,9 +20,9 @@ namespace klaviyo.test_client
             {
                 Token = gateway.Token,
             };
-            var list = new List<NotRequiredProperty>();
             pe.Properties.Email = "zeeomar@deffuse.com";
             pe.Properties.NotRequiredProperties.Add(new NotRequiredProperty("HBD_name", "TESTVA2L"));
+            pe.Properties.NotRequiredProperties.Add(new NotRequiredProperty("HBD_email", "TESTVA2L"));
 
             gateway.Identify(pe);
         }

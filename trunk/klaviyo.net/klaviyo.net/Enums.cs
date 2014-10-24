@@ -10,4 +10,10 @@ namespace klaviyo.net
         Fail,
         Success
     }
+
+    public enum PropertyType
+    {
+        Event,
+        People
+    }
 }
