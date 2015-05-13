@@ -34,7 +34,7 @@ namespace klaviyo.net
                 UriTemplate uriTemplate = new UriTemplate("track?data={data}");
                 IDictionary<string, string> parameters = new Dictionary<string, string>();
 
-                System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
+                System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();
                 List<JsonConverter> converters = new List<JsonConverter>();
 
                 converters.Add(new KlaviyoEventConverter());
@@ -68,7 +68,7 @@ namespace klaviyo.net
                 UriTemplate uriTemplate = new UriTemplate("identify?data={data}");
                 IDictionary<string, string> parameters = new Dictionary<string, string>();
 
-                System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
+                System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();
                 List<JsonConverter> converters = new List<JsonConverter>();
 
                 converters.Add(new KlaviyoPeopleConverter());
