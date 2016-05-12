@@ -3,9 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
 
 namespace klaviyo.net
 {
@@ -22,7 +20,8 @@ namespace klaviyo.net
 
         public string Token
         {
-            get {
+            get
+            {
                 return _token;
             }
         }
@@ -47,7 +46,7 @@ namespace klaviyo.net
                 parameters.Add("data", sBase64);
                 Uri formattedUri = uriTemplate.BindByName(_baseAddressUri, parameters);
                 string str = "";
-                
+
                 using (Stream myStream = downloader.OpenRead(formattedUri))
                 {
                     using (StreamReader sr = new StreamReader(myStream))

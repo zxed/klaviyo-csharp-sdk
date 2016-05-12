@@ -1,19 +1,16 @@
 ﻿using klaviyo.net;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace klaviyo.test_client
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             peopleAPI();
-
         }
-        static void peopleAPI()
+
+        private static void peopleAPI()
         {
             KlaviyoGateway gateway = new KlaviyoGateway("9sc6fd");
             KlaviyoPeople pe = new KlaviyoPeople()
@@ -27,7 +24,8 @@ namespace klaviyo.test_client
 
             gateway.Identify(pe);
         }
-        static void eventAPI()
+
+        private static void eventAPI()
         {
             KlaviyoGateway gateway = new KlaviyoGateway("test12");
             KlaviyoEvent ev = new KlaviyoEvent()
