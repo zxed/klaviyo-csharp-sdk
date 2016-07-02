@@ -1,8 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace klaviyo.net.Converters
 {
@@ -29,7 +26,7 @@ namespace klaviyo.net.Converters
                 writer.WritePropertyName("$value");
                 serializer.Serialize(writer, ((Properties)value).Value);
             }
-          
+
             foreach (var item in ((Properties)value).NotRequiredProperties)
             {
                 writer.WritePropertyName(item.Name);

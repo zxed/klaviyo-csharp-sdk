@@ -1,8 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace klaviyo.net.Converters
 {
@@ -24,11 +21,11 @@ namespace klaviyo.net.Converters
 
             writer.WritePropertyName("$id");
             serializer.Serialize(writer, ((CustomerProperties)value).Id);
-            
+
             writer.WritePropertyName("$email");
             serializer.Serialize(writer, ((CustomerProperties)value).Email);
 
-            if (string.IsNullOrEmpty(((CustomerProperties)value).Id) 
+            if (string.IsNullOrEmpty(((CustomerProperties)value).Id)
                 && string.IsNullOrEmpty(((CustomerProperties)value).Email))
                 throw new Exception("Need enter email or id!");
 
