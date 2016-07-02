@@ -12,7 +12,7 @@ namespace klaviyo.test_client
 
         private static void peopleAPI()
         {
-            KlaviyoGateway gateway = new KlaviyoGateway("9sc6fd");
+            KlaviyoGateway gateway = new KlaviyoGateway("");
             KlaviyoPeople pe = new KlaviyoPeople()
             {
                 Token = gateway.Token,
