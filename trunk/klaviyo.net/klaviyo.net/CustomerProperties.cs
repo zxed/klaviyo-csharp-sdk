@@ -18,6 +18,9 @@ namespace klaviyo.net
         [DataMember(Name = "$email")]
         public string Email { get; set; }
 
+        [DataMember(Name = "phone_number")]
+        public string PhoneNumber { get; set; }
+
         [DataMember(Name = "$first_name")]
         public string FirstName { get; set; }
 
