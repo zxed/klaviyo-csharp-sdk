@@ -25,8 +25,12 @@ namespace klaviyo.net.Converters
             writer.WritePropertyName("$email");
             serializer.Serialize(writer, ((CustomerProperties)value).Email);
 
+            writer.WritePropertyName("phone_number");
+            serializer.Serialize(writer, ((CustomerProperties)value).PhoneNumber);
+
             if (string.IsNullOrEmpty(((CustomerProperties)value).Id)
-                && string.IsNullOrEmpty(((CustomerProperties)value).Email))
+                && string.IsNullOrEmpty(((CustomerProperties)value).Email)
+                && string.IsNullOrEmpty(((CustomerProperties)value).PhoneNumber))
                 throw new Exception("Need enter email or id!");
 
             writer.WritePropertyName("$first_name");
