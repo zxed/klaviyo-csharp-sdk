@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "klaviyo.net", "klaviyo.net\klaviyo.net.csproj", "{D85ED99D-3059-47BD-82F5-BD836695D578}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "klaviyo.test-client", "..\klaviyo.test-client\klaviyo.test-client.csproj", "{4229B5B5-0541-4F67-AF46-45AAF6894300}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "klaviyo.net", "klaviyo.core\klaviyo.net.csproj", "{C0BE2D4B-8CAC-40B8-9098-9F90F9F3FEA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,16 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D85ED99D-3059-47BD-82F5-BD836695D578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D85ED99D-3059-47BD-82F5-BD836695D578}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D85ED99D-3059-47BD-82F5-BD836695D578}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D85ED99D-3059-47BD-82F5-BD836695D578}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4229B5B5-0541-4F67-AF46-45AAF6894300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4229B5B5-0541-4F67-AF46-45AAF6894300}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4229B5B5-0541-4F67-AF46-45AAF6894300}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4229B5B5-0541-4F67-AF46-45AAF6894300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0BE2D4B-8CAC-40B8-9098-9F90F9F3FEA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0BE2D4B-8CAC-40B8-9098-9F90F9F3FEA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0BE2D4B-8CAC-40B8-9098-9F90F9F3FEA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0BE2D4B-8CAC-40B8-9098-9F90F9F3FEA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {962B1078-FA5F-4B3C-A7D4-22232225765A}
 	EndGlobalSection
 EndGlobal

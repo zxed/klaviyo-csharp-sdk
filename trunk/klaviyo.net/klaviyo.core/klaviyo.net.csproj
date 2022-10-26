@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Klaviyo Core</Title>
+    <PackageProjectUrl>https://github.com/zxed/net-klaviyo</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/zxed/net-klaviyo</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>klaviyo</PackageTags>
+	  <Version>1.0.4</Version>
+    <Company>Zeeshan Sheikh</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+</Project>

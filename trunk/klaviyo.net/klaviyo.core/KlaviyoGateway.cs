@@ -31,8 +31,6 @@ namespace klaviyo.net
         {
             using (WebClient downloader = new WebClient())
             {
-                UriTemplate uriTemplate = new UriTemplate("track?data={data}");
-                IDictionary<string, string> parameters = new Dictionary<string, string>();
 
                 UTF8Encoding encoding = new UTF8Encoding();
                 List<JsonConverter> converters = new List<JsonConverter>();
@@ -44,8 +42,7 @@ namespace klaviyo.net
 
                 byte[] bytes = encoding.GetBytes(JsonConvert.SerializeObject(obj, converters.ToArray()));
                 string sBase64 = Convert.ToBase64String(bytes);
-                parameters.Add("data", sBase64);
-                Uri formattedUri = uriTemplate.BindByName(_baseAddressUri, parameters);
+                Uri formattedUri = new Uri(_baseAddressUri + "track?data=" + sBase64);
                 string str = "";
 
                 using (Stream myStream = downloader.OpenRead(formattedUri))
@@ -65,9 +62,6 @@ namespace klaviyo.net
         {
             using (WebClient downloader = new WebClient())
             {
-                UriTemplate uriTemplate = new UriTemplate("identify?data={data}");
-                IDictionary<string, string> parameters = new Dictionary<string, string>();
-
                 System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();
                 List<JsonConverter> converters = new List<JsonConverter>();
 
@@ -77,8 +71,7 @@ namespace klaviyo.net
 
                 byte[] bytes = encoding.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(obj, converters.ToArray()));
                 string sBase64 = System.Convert.ToBase64String(bytes);
-                parameters.Add("data", sBase64);
-                Uri formattedUri = uriTemplate.BindByName(_baseAddressUri, parameters);
+                Uri formattedUri = new Uri(_baseAddressUri + "identify?data=" + sBase64);
                 string str = "";
 
                 using (Stream myStream = downloader.OpenRead(formattedUri))
